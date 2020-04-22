@@ -1,0 +1,6 @@
+# HTTrack Website Copier Cookie File
+# This file format is compatible with Netscape cookies
+.google.com	TRUE	/	FALSE	1999999999	NID	202=faFoXosOYHVe22mt29WOWgaJOt83ZaWoPhMeUPwhSVLXfrfL5qt1lg8BP2Zr4viDP9pRgh_aR_F2X6OrXW1PTZSRVekWqFf0L9iPiYWjvHnxU-qO7z2ESSUOigEoTyrI5H5jemZhBmqdA0qYIiwEvFW5feAys7sTUxQGomOl3dg
+.academo.org	TRUE	/	FALSE	1999999999	__cfduid	d38ec5971f10b4a7e45593acb9321c3631587541215
+academo.org	TRUE	/	FALSE	1999999999	SameSite	Lax
+

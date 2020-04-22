@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+	<meta charset="utf-8">
+	<title>Logic Gate Simulator | by Beta.TORR</title>
+	
+	
+	
+	<link rel="stylesheet" href="../../scss/main45bf.css?v=1583410376">
+	<link rel="stylesheet" href="../../../maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+	
+<style type="text/css" class='demo-specific-styles'>
+.window { border:1px solid #346789;
+box-shadow: 2px 2px 19px #aaa;
+   -o-box-shadow: 2px 2px 19px #aaa;
+   -webkit-box-shadow: 2px 2px 19px #aaa;
+   -moz-box-shadow: 2px 2px 19px #aaa;
+opacity:0.8;
+filter:alpha(opacity=80);
+width:5em; height:5em;
+line-height:5em;
+text-align:center;
+/*z-index:20; */
+position:absolute;
+background-color:#eeeeef;
+color:black;
+font-family:helvetica;padding:0.5em;
+font-size:0.9em;
+cursor: move;}
+.window:hover {
+box-shadow: 2px 2px 19px #444;
+   -o-box-shadow: 2px 2px 19px #444;
+   -webkit-box-shadow: 2px 2px 19px #444;
+   -moz-box-shadow: 2px 2px 19px #444;
+    opacity:0.6;
+filter:alpha(opacity=60);
+}
+._jsPlumb_endpoint{
+	cursor: pointer;
+	z-index: 1;
+	/*border:4px dotted rgba(255,255,255,0);*/
+}
+/*Webkit transform added by me to make it easier to see when connection has been made*/
+.active {
+	border:2px dotted green;
+	/*-webkit-transform: translate(-4px,-4px);*/
+}
+/*.window .close{
+	display: none;
+}*/
+/*.window:hover .close{*/
+.window .close{
+	position: absolute;
+	top: 0;
+	right: 0;
+	line-height: 20px;
+	display: block;
+	width: 20px;
+	height: 20px;
+	background: #2c3e50;
+	color:white;
+	cursor: pointer;
+	padding: 0;
+	margin: 0;
+	-webkit-appearance: none;
+	border: none;
+}
+.hover {
+	border:2px dotted red;
+	/*-webkit-transform: translate(-4px,-4px);*/
+}
+#INPUT {
+	left: 391.5px;
+	top: 389px;
+}
+#AND {
+	left: 30%;
+	top: 30%;
+}
+#OR{
+	left:40%;
+	top:40%;
+}
+#output-0 {
+	right: 0%;
+	top: 50%;
+}
+#input-1 {
+	left: 10%;
+	top: 20%;
+}
+.on{
+	background-color: #ffee75;
+}
+#demo{
+	position: relative;
+	height:500px;
+	background: url('graph-paper.png')
+}
+.window img{
+	width:100%;
+}
+.truth-table{
+	margin-bottom: 100px;
+}
+				</style>
+	
+ 
+	<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+	<script type="text/javascript">
+    window._mNHandle = window._mNHandle || {};
+    window._mNHandle.queue = window._mNHandle.queue || [];
+    medianet_versionId = "3121199";
+</script>
+<script src="../../../contextual.media.net/dmedianet9d1b.js?cid=8CUN6154D" async></script>
+
+</head>
+
+<body class='body--shaded '>
+
+	<div class="header">
+		<div class="header-upper">
+			<div class="header-inner">
+				<a class="logo" href="https://betatorr.blogspot.com/">Beta.TORR</a>
+				<ul class="nav nav--primary">
+					<li><a class="" href="https://betatorr.blogspot.com/">About</a></li>
+					
+			</div>
+		</div>
+		<div class="header-lower">
+			<div class="header-inner">
+				<ul class="nav nav--secondary">
+					
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div class="wrapper">
+		<!-- <div class='sponsor-wrapper js-sponsor-wrapper'> -->
+		<div class="main">
+		  
+		  
+		  
+  <div class="preamble">
+	<h1>Logic Gate Simulator</h1>
+	<hr>
+	<p class="blurb">
+		A free, simple, online logic gate simulator. Investigate the behaviour of AND, OR, NOT, NAND, NOR and XOR gates. Select gates from the dropdown list and click "add node" to add more gates. Drag from the hollow circles to the solid circles to make connections. Right click connections to delete them. See below for more detailed instructions.
+	</p>
+	<p class="tags">&nbsp;</p>
+    <hr>
+
+		<div class="social-buttons">
+	<div class="social-button social-button--google-classroom">
+        <script src="../../../apis.google.com/js/platform.js" async defer></script>
+        
+
+	
+
+	
+	
+</div>
+
+    <hr>
+</div>
+
+<div id="demo"  class="">
+	
+</div>
+
+
+<div class="clearfix" id='ui-container'>
+</div>
+
+
+
+<div class="demo-description">
+
+    <hr>
+
+    <p>
+	The demo above allows you to create sequences of logic gates to see how they behave when connected to various inputs and outputs. Initially, 
+	you are presented with a simple on/off input and an output. To connect them, click and drag from the hollow circle on the right side of the
+	on/off switch, and release the mouse when you are over the solid circle on the left side of the "output" block.
+</p>
+
+<p>
+	For each of the logic gates, outputs are hollow circles, and inputs are solid circles. Our "on/off" switch and "output block" aren't actually logic gates,
+	but they are required because they give us the 1s and 0s needed to see how the gates behave. Click the on\off switch and see what happens. It turns yellow.
+	This is our way of differentiating between 0 (off) and 1 (on).
+</p>
+
+<p>
+	To add a new logic gate, or an additional input block, choose from the dropdown menu and then click "add node". The new node will be placed in the top left hand corner, and
+	you can drag it to your desired position. To delete nodes, click the small cross in the top right corner of its enclosing box. To remove connections, you can click on the
+	input (solid circle) and drag away and release, or alternatively you can right click anywhere on the connection.
+</p>
+
+
+<h4>NOT Gate</h4>
+
+<img src="symbols/not.svg" alt="NOT gate" width='100px'>
+
+<p>
+	The NOT gate is also known as an inverter because the output is the exact opposite of the input. It has one input and one output.
+	The two possibilities are written out in the table below. Tables listing all logical possibilities like this are known as <em>truth tables</em>.
+</p>
+
+<table class="table table-bordered truth-table">
+	<thead>
+		<tr><th>Input</th><th>Output</th></tr>
+	</thead>
+	<tr><td>0</td><td>1</td></tr>
+	<tr><td>1</td><td>0</td></tr>
+</table>
+
+<h4>AND Gate</h4>
+
+<img src="symbols/and.svg" alt="NOT gate" width='100px'>
+
+<p>
+	The AND gate has two inputs and one output. The output is 1 if <em>both</em> inputs are 1, and for all other cases the output is 0.
+</p>
+
+<table class="table table-bordered truth-table">
+	<thead>
+		<tr><th>Input 1</th><th>Input 2</th><th>Output</th></tr>
+	</thead>
+	<tr><td>0</td><td>0</td><td>0</td></tr>
+	<tr><td>1</td><td>0</td><td>0</td></tr>
+	<tr><td>0</td><td>1</td><td>0</td></tr>
+	<tr><td>1</td><td>1</td><td>1</td></tr>
+</table>
+
+<h4>NAND Gate</h4>
+
+<img src="symbols/nand.svg" alt="NAND gate" width='100px'>
+
+<p>
+	The NAND gate behaves in the opposite fashion to and AND gate. You can think of it as an AND gate followed immediately by a NOT gate.
+	Its output is 0 when the two inputs are 1, and for all other cases, its output is 0.
+	The name NAND comes from joining NOT and AND. The symbol for NAND is the same as that for AND except for the addition of a small circle on the right side.
+</p>
+
+<table class="table table-bordered truth-table">
+	<thead>
+		<tr><th>Input 1</th><th>Input 2</th><th>Output</th></tr>
+	</thead>
+	<tr><td>0</td><td>0</td><td>1</td></tr>
+	<tr><td>1</td><td>0</td><td>1</td></tr>
+	<tr><td>0</td><td>1</td><td>1</td></tr>
+	<tr><td>1</td><td>1</td><td>0</td></tr>
+</table>
+
+<h4>OR Gate</h4>
+
+<img src="symbols/or.svg" alt="OR gate" width='100px'>
+
+<p>
+	The OR gate has two inputs and one output. If at least one of the inputs is 1, then the output will be 1. If neither input is 1, the output will be 0.
+</p>
+
+<table class="table table-bordered truth-table">
+	<thead>
+		<tr><th>Input 1</th><th>Input 2</th><th>Output</th></tr>
+	</thead>
+	<tr><td>0</td><td>0</td><td>0</td></tr>
+	<tr><td>1</td><td>0</td><td>1</td></tr>
+	<tr><td>0</td><td>1</td><td>1</td></tr>
+	<tr><td>1</td><td>1</td><td>1</td></tr>
+</table>
+
+<h4>NOR Gate</h4>
+
+<img src="symbols/nor.svg" alt="NOR gate" width='100px'>
+
+<p>
+	Just as the NAND gate could be thought of as an AND followed by a NOT, a NOR can be thought of as an OR also followed by a NOT.
+</p>
+
+<table class="table table-bordered truth-table">
+	<thead>
+		<tr><th>Input 1</th><th>Input 2</th><th>Output</th></tr>
+	</thead>
+	<tr><td>0</td><td>0</td><td>1</td></tr>
+	<tr><td>1</td><td>0</td><td>0</td></tr>
+	<tr><td>0</td><td>1</td><td>0</td></tr>
+	<tr><td>1</td><td>1</td><td>0</td></tr>
+</table>
+
+<h4>XOR Gate</h4>
+
+<img src="symbols/xor.svg" alt="XOR gate" width='100px'>
+
+<p>
+	With an OR gate, if both inputs were 1, the output was 1. However, with an XOR, (exclusive OR), if both inputs are 1, the output is 0. For all
+	other scenarios, the XOR behaves the same as the OR.
+</p>
+
+<table class="table table-bordered truth-table">
+	<thead>
+		<tr><th>Input 1</th><th>Input 2</th><th>Output</th></tr>
+	</thead>
+	<tr><td>0</td><td>0</td><td>0</td></tr>
+	<tr><td>1</td><td>0</td><td>1</td></tr>
+	<tr><td>0</td><td>1</td><td>1</td></tr>
+	<tr><td>1</td><td>1</td><td>0</td></tr>
+</table>
+			
+	
+
+		<hr>
+
+		<h4>Credits</h4>
+
+		<ul class="credits">
+	        
+		      
+	        
+        </ul>
+
+    
+
+	
+	    <div id="disqus_thread"></div>
+      <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+            var disqus_shortname = 'academo'; // required: replace example with your forum shortname
+
+            var disqus_config = function () {
+				this.page.url = 'index.html';
+				// this.page.identifier = 'a unique identifier for each page where Disqus is present';
+				// this.page.title = 'a unique title for each page where Disqus is present';
+		    };
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view.</noscript>
+    
+    	        
+ </div>
+
+ <div class="sidebar">
+	<h3>You might also be interested in</h3>
+ 	<hr>
+ 	<ul class="thumbnails">
+	 	<!-- <li class='sponsored-tile js-sponsored-tile'>	</li> -->
+	 	<li class='sponsored-tile'>
+		 	<div id="668912154">
+		      <script type="text/javascript">
+			        try {
+			            window._mNHandle.queue.push(function (){
+			                window._mNDetails.loadTag("668912154", "300x250", "668912154");
+			            });
+			        }
+			        catch (error) {}
+			    </script>
+			</div>
+			<p class="thumbnail-title">Sponsored Link</p>
+		</li>
+
+ 	</ul>
+ </div>
+
+
+
+
+	<script src="../../../ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="../../js/all45bf.js?v=1583410376"></script> 
+
+
+		
+
+			
+	<script src="dom.jsPlumb-1.7.2-min3552.js?v=1465590712"></script>
+	<script src="animation3552.js?v=1465590712"></script>
+		    
+
+	<script>
+			    //ASSET SERVING
+			    var assetPath = "https://s3-us-west-2.amazonaws.com/academo-assets";
+
+			    $(document).trigger({
+			    	type: "scriptLoaded"
+			    });
+		    </script>
+
+	    
+
+	    
+	    
+
+
+	    
+
+	    
+
+
+
+    <script>
+		    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		    	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		    	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		    })(window,document,'script','../../../www.google-analytics.com/analytics.js','ga');
+
+		    if (window.location.host == 'academo.org') {
+		    	ga('create', 'UA-17960919-9', 'academo.org');
+		    	ga('send', 'pageview');
+		    }
+	    </script>
+		</div>
+	    <div class="push"></div>
+	    </div>
+<div class="footer">
+	    	<div class="footer-inner">
+		    	&copy; Beta.TORR 2020.
+  </div>
+	    </div> <!-- End of content -->
+	</body>
+
+</html>
